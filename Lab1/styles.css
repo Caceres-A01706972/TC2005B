@@ -52,7 +52,7 @@ div{
     width: 300px;
     height: 70px;
     display: block;
-    background-image: url("/Images/logo.png");
+    background-image: url("/TC2005B/Lab1/Images/logo.png");
     background-size: 100% auto;
     background-repeat: no-repeat;
     order: 1;
