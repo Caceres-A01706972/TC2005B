@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
+
 body{
     width: 100%;
     height: 100%;
@@ -6,7 +8,7 @@ body{
     background-color: rgb(18, 18, 18);
     color: rgb(255, 255, 255, 0.87);
     font-size: 1rem;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: Roboto;
     line-height: 1.5rem;
     font-weight: 400;
     text-rendering: optimizelegibility;
@@ -131,8 +133,32 @@ a{
     background: rgb(18, 18, 18);
 }
 
+.emoji{
+    margin-left: 1rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.title{
+    font-size: 2.625rem;
+    line-height: 4rem;
+    margin-bottom: 0px;
+    font-family: Roboto;
+}
+
+h1{
+    font-weight: 700;
+    color: rgb(250, 250, 250);
+}
+
 .description{
     margin-bottom: 2rem;
+}
+
+.subtitle{
+    margin-top: -0.75rem;
+    font-size: 1.85rem;
+    line-height: 3rem;
 }
 
 p{
@@ -142,6 +168,23 @@ p{
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     
+}
+
+.imagenes img{
+    height: 90%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.imagenes:hover .shape{
+    bottom: 40px;
+}
+
+.imagenes:hover .timmy{    
+    left: 45%;
 }
 
 .Social-Wrapper{
