@@ -119,6 +119,10 @@ a{
     font-size: 1rem;
     padding: 0.5rem 1.5rem;
     margin: 0px;
+
+    display: block;
+    text-align: center;
+    
 }
 
 .cta-btn:hover{
@@ -274,6 +278,8 @@ h3{
     font-size: 1.75rem;
     line-height: 2.25rem;
     color: rgb(250, 250, 250);
+    
+    margin-bottom: 3rem;
 }
 
 .image-content{
@@ -444,4 +450,189 @@ h3{
 
 .project1-image:hover{
     transform: translateY(-10px);
+}
+
+.styled-button{
+    width: 15.625rem;
+    height: 3rem;
+    background-color: rgb(250, 250, 250);
+    color: rgb(18, 18, 18);
+    padding: 1rem;
+    margin: 0px auto;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 1rem;
+    text-decoration: none;
+    text-align: center;
+
+    font-family: inherit;
+    line-height: 1.15;
+}
+
+.cta-btn2{
+    width: 15.625rem;
+    height: 3rem;
+    background-color: rgb(250, 250, 250);
+    color: rgb(18, 18, 18);
+    padding: 1rem;
+    margin: 0px 600px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 1rem;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.contact{
+    width: 100%;
+    height: auto;
+    background: rgb(18,18,18);
+    margin-top: 6rem;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.contact-wrapper{
+    width: 100%;
+    max-width: 45rem;
+    height: 100%;
+    display: inline-block;
+
+    margin: 0px auto;
+    padding: 0px 2.5rem;
+}
+
+.contact-wrapper p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.profile{
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    margin-top: 3rem;
+}
+
+.avatar{
+    margin-bottom: 0px;
+
+    width: 100%;
+    max-width: 8.75rem;
+    border-radius: 50%;
+    margin-right: 5rem;
+}
+
+.avatar-image{
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    
+}
+
+.profile .details{
+    font-size: 1.125rem;
+    line-height: 2rem;
+}
+
+strong{
+    font-weight: bolder;
+}
+
+.underline{
+    color: rgb(250, 250, 250);
+    box-shadow: rgb(42 41 38) 0px -0.5rem 0px inset;
+    
+}
+
+.underline:hover{
+    box-shadow: rgb(42 41 38) 10px -0.2rem 100px inset;
+}
+
+.socials{
+    overflow: visible;
+
+
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    -webkit-box-pack: start;
+    justify-content: start;
+    justify-items: start;
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.last-socials{
+    margin-right: 1rem;
+
+    width: 9rem;
+    height: auto;
+    background: linear-gradient(to right, rgb(250, 250, 250) 50%, rgb(18, 18, 18) 50%) right bottom / 205% 100%;
+    border-radius: 1rem;
+    border: 0.125rem solid rgb(250, 250, 250);
+    padding: 0.5rem 1.25rem;
+    transition: all 0.1s ease-out 0s;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(250, 250, 250);
+}
+
+.last-socials a{
+    margin-bottom: 0.75rem;
+}
+
+.last-socials svg{
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: -0.05rem;
+}
+
+footer{
+    display: block;
+    width: 100%;
+    height: 7.5rem;
+    background: rgb(18, 18, 18);
+    border-top: 3px solid rgba(0, 0, 0, 0.32);
+    margin-top: 10rem;
+}
+
+.content-footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+
+    max-width: 62.5rem;
+    margin: 0px auto;
+    padding: 0px 2.5rem;
+}
+
+.logo{
+    width: 300px;
+    height: 70px;
+    display: block;
+    background-image: url("/TC2005B/Lab1/Images/logo.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    order: 1;
 }
