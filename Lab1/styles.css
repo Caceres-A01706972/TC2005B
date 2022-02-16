@@ -336,11 +336,20 @@ h3{
     width: 30px;
     height: 30px;
     margin-right: 10px;
+    opacity: 1;
+}
+
+.github-image{
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
     opacity: 0.65;
     transition: all 200ms ease-in;
 }
 
-.skills-image:hover{
+.github-image:hover{
     opacity: 1;
 }
 
