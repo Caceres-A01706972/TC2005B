@@ -92,3 +92,12 @@ h3:hover{
     color: rgb(18, 18, 18);
 }
 
+.libro{
+    width:400px;
+    border: 0px;
+    color: black;
+    background-color: aliceblue;
+    margin: 10px auto;
+    max-width: 200px;
+    text-align: center;
+}

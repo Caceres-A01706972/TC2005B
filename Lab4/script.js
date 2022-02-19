@@ -116,3 +116,90 @@ function inverso(){
     document.getElementById("inverso").innerHTML = ("Numero Inverso: " + num_inverso);
 }
 
+
+function ver_libreria(flag, modFlag){
+    const libro1 = {
+        author: 'Stephen King',
+        title: 'It',
+        releasedate: '1990',
+        status: 'Finished'
+    }
+
+    const libro2 = {
+        author: 'Kobe Bryant',
+        title: 'The Mamba Mentality',
+        releasedate: '2018',
+        status: 'Currently-Reading'
+    }
+
+    const libro3 = {
+        author: 'Mitch Albom',
+        title: 'The Stranger in the Lifeboat',
+        releasedate: '2021',
+        status: 'Not Started'
+    }
+
+    document.getElementById("author1").innerHTML = ("Author: " + libro1.author);
+    document.getElementById("title1").innerHTML = ("Title: " + libro1.title);
+    document.getElementById("releasedate1").innerHTML = ("Release Date: " + libro1.releasedate);
+    document.getElementById("status1").innerHTML = ("Stutus: " + libro1.status);
+
+
+    document.getElementById("author2").innerHTML = ("Author: " + libro2.author);
+    document.getElementById("title2").innerHTML = ("Title: " + libro2.title);
+    document.getElementById("releasedate2").innerHTML = ("Release Date: " + libro2.releasedate);
+    document.getElementById("status2").innerHTML = ("Stutus: " + libro2.status);
+
+    document.getElementById("author3").innerHTML = ("Author: " + libro3.author);
+    document.getElementById("title3").innerHTML = ("Title: " + libro3.title);
+    document.getElementById("releasedate3").innerHTML = ("Release Date: " + libro3.releasedate);
+    document.getElementById("status3").innerHTML = ("Stutus: " + libro3.status);
+    document.getElementById("libros").style = ("display: grid; grid-template-columns: repeat(auto-fill, 250px);")
+    
+    const newLibro = new Object();
+    if(flag==true){
+        newLibro.author = prompt("Ingresa el nombre del autor: ");
+        newLibro.title = prompt("Ingresa el nombre del libro");
+        newLibro.releasedate = prompt("Ingresa el Release Date");
+        newLibro.status = "Not Started";
+        place = document.getElementById("libros");
+        let newBook = document.createElement("div");
+        newBook.className = "libro";
+        newBook.id = "libroN";
+        place.appendChild(newBook)
+
+        let newp = document.createElement("p");
+        newp.id = "authorN"
+        newBook.appendChild(newp);
+        document.getElementById("authorN").innerHTML = ("Author: " + newLibro.author);
+        
+        let newt = document.createElement("p");
+        newt.id = "titleN"
+        newBook.appendChild(newt);
+        document.getElementById("titleN").innerHTML = ("Title: " + newLibro.title);
+
+        let newr = document.createElement("p");
+        newr.id = "releaseN"
+        newBook.appendChild(newr);
+        document.getElementById("releaseN").innerHTML = ("Release Date: " + newLibro.releasedate);
+
+        let news = document.createElement("p");
+        news.id = "statusN"
+        newBook.appendChild(news);
+        document.getElementById("statusN").innerHTML = ("Status: " + newLibro.status);
+
+        let btn = document.createElement("button");
+        document.getElementById("libros").appendChild(btn);
+        btn.id = "btnMod";
+        document.getElementById("btnMod").innerHTML = ("Modificar");
+        
+        //btn.onclick= (modStatus(newLibro));
+    }
+    
+
+}
+
+function modStatus(newLibro){
+    newLibro.status = prompt("Cual es el Status del Libro?");
+}
+
