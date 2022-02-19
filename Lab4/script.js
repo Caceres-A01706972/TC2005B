@@ -47,3 +47,72 @@ function answerSuma(numero1, numero2, suma){
     document.getElementById("timeTaken").innerHTML = ("Tiempo tardado: " + tiempo + " segundos");
 
 }
+
+function contador(){
+    console.log("function success");
+    let n = prompt("Ingresa la cantidad de elementos que quieres en el arreglo.");
+    let arreglo = new Array;
+    let negativos = 0;
+    let ceros = 0;
+    let positivos = 0;
+
+    for(let i = 0; i<n; i++){
+        let numero = Math.floor(Math.random() * 100);
+        arreglo.push(numero);
+    }
+
+    document.getElementById("arreglo").innerHTML = ("El arreglo es el siguiente: " + arreglo);
+    for(let i = 0; i<arreglo.length; i++){
+        if(arreglo[i] < 0){
+            negativos++;
+        } else if(arreglo[i] == 0) {
+            ceros++;
+        } else {
+            positivos++;
+        }
+    }
+
+    document.getElementById("cuenta").innerHTML = ("Positivos: " + positivos + ", Ceros: " + ceros + ", Negativos: " + negativos);
+
+}
+
+function promedios(){
+    let grupos = Math.floor(Math.random() * 10) + 1;
+    let grades = [];
+    for(let i = 0; i<grupos; i++){
+        grades[i] = [];
+        for(let j=0; j<grupos; j++){
+            let grade = Math.floor(Math.random()*10);
+            grades[i][j] = grade;
+        }
+    }
+
+    let promedios = [];
+    promedios = calcula_promedios(grades, grupos);
+    document.getElementById("averages").innerHTML = ("Arreglo con promedios: " + promedios);
+
+    console.log(grades);
+    console.log(promedios);
+}
+
+function calcula_promedios(grades, grupos){
+    let promedios = [];
+    for(let i = 0; i<grupos; i++){
+        let suma = 0;
+        for(let j = 0; j<grupos; j++){
+            suma += grades[i][j];
+        }
+        let average = Number(Math.round(suma/grupos + 'e2')+ 'e-2');
+        promedios.push(average);
+    }
+    return promedios;
+}
+
+
+function inverso(){
+    let numero = prompt("Ingresa un numero de mas de 1 digito: ");
+    let num_inverso = parseFloat(numero.toString().split('').reverse().join('')) * Math.sign(numero);
+    document.getElementById("numero").innerHTML = ("Numero original: " + numero);
+    document.getElementById("inverso").innerHTML = ("Numero Inverso: " + num_inverso);
+}
+
