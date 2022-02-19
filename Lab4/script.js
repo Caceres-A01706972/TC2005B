@@ -22,22 +22,28 @@ function cuadradosCubos() {
     }
 }
 
+
+
 function suma2numeros(){
     let numero1 = Math.floor(Math.random() * 100);
     let numero2 = Math.floor(Math.random() * 100);
-    let suma = numero1 + numero2;
-
     document.getElementById("ecuacionSuma").innerHTML = (numero1 + "+" + numero2 + "=");
-
+    let suma = numero1 + numero2;
+    answerSuma(numero1, numero2, suma);
 }
 
-function answerSuma(){
-    let timeStart = new Date();
-    let resp = document.getElementById("answer").value;
-    let timeEnd = new Date();
-    console.log(resp);
+function answerSuma(numero1, numero2, suma){
+    let timeStart = performance.now();
+    let resp = prompt(numero1 + "+" + numero2 );
+    if(resp == suma){
+        document.getElementById("typed").innerHTML = ("Tu respuesta: " + resp);
+        document.getElementById("grade").innerHTML = ("Correcto!");
+    } else {
+        document.getElementById("typed").innerHTML = ("Tu respuesta: " + resp);
+        document.getElementById("grade").innerHTML = ("Incorrecto!");
+    }
+    let timeEnd = performance.now();
+    let tiempo = Math.floor(timeEnd - timeStart) / 1000;
+    document.getElementById("timeTaken").innerHTML = ("Tiempo tardado: " + tiempo + " segundos");
 
-    let tiempo = (timeStart - timeEnd);
-
-    console.log("Te tardaste: " + tiempo);
 }
