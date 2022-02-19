@@ -57,7 +57,7 @@ function contador(){
     let positivos = 0;
 
     for(let i = 0; i<n; i++){
-        let numero = Math.floor(Math.random() * 100);
+        let numero = Math.floor(Math.random()*10);
         arreglo.push(numero);
     }
 
