@@ -1,3 +1,29 @@
+function pregunta1(){
+    alert("Que diferencias y semejanzas hay entre Java y JavaScript?             ");
+    alert("Java es un lenguaje utilizado para el paradigma de Orientado a Objetos, mientras que JavaScript es un lenguaje en el cual su propostio es la interaccion web. De la misma manera Java es un lenguaje compilado, mientras que JavaScript es uno interpretado. Sin embargo, ambos utlizan casi la misma sintxis para la mayoria de las situaciones.");
+}
+
+function pregunta2(){
+    alert("¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)" );
+    alert("getDate(): Retorna los dias del mes.     getDay(): retorna los dias de la semana.        getFullYear(): Retorna el año.        getHours(): Retorna la hora.          getMinutes(): Retorna los minutos.")
+}
+
+function pregunta3(){
+    alert("¿Qué métodos tienen los arreglos? (Menciona al menos 5*)             ");
+    alert("pop(): Elimina el ultimo elemento agregado.         push(): Agrega un elemento al final del arreglo.       toString(): Convierte un arreglo en un string.         concat(): Da un nuevo arreglo concatenado con otro arreglo.        splice(): Inserta y elimina elementos en una posicion especifica del arreglo");
+}
+
+
+function pregunta4(){
+    alert("¿Cómo se declara una variable con alcance local dentro de una función?             ");
+    alert("Se usa la palabra reservada let.");
+}
+
+
+function pregunta5(){
+    alert("¿Qué implicaciones tiene utilizar variables globales dentro de funciones?             ");
+    alert("Se corre el riesgo de que esa variable global haga cambios dentro de otras funciones en el codigo.")
+}
 
 
 function cuadradosCubos() {
