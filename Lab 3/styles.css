@@ -16,6 +16,9 @@ body{
     line-height: 1.5rem;
     font-weight: 400;
     text-rendering: optimizelegibility;
+
+    opacity: 0;
+    transition: opacity 2s;
 }
 *{
     box-sizing: border-box;
@@ -139,6 +142,7 @@ a{
     width: 100%;
     height: auto;
     background: rgb(18, 18, 18);
+    
 }
 
 .emoji{
@@ -639,4 +643,16 @@ footer{
     background-size: 100% auto;
     background-repeat: no-repeat;
     order: 1;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
 }
