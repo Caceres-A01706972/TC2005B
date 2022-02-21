@@ -102,6 +102,7 @@ function contador(){
 
 }
 
+
 function promedios(){
     let grupos = Math.floor(Math.random() * 10) + 1;
     let grades = [];
