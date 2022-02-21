@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab5</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+</head>
+<body>
+
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center">Lab5: Frameworks de Estilos</a>
+        </div>
+        <div class="nav-content">
+          <ul class="tabs tabs-transparent">
+            <li class="tab"><a class="active" href="index.html">Wheather</a></li>
+            <li class="tab"><a href="lab5_questions.html">Lab5 Questions</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+
+
+    <div class="container" style="margin-top: 45px;">
+        <div class="weather-container">
+            <input type="search" id="query" name="q"  placeholder="Search for a city...">
+            <a onclick="fn1()" class="waves-effect waves-light btn-small">Search</a>
+            <a onclick="location.reload()" class="waves-effect waves-light btn-small">Clear</a>
+            <div class="card hoverable" style="width: 50%; margin-top: 30px;">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="Images/city.png" style= "width:50%; height: auto; position: center; text-align: center;">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">
+                    <div class="row">
+                        <div class="col m s5">
+                            <p class="city"></p>
+                        </div>
+                        <div class="col m s2">
+                            <p class="temp"></p>
+                        </div>
+                    </div>
+                    <i class="material-icons right">more_vert</i>
+                </span>
+                <div class="row">
+                    <div class="col m s2"><img class="icon"></div>
+                    <div class="col m s2"><p class="weather-description"></p></div>
+
+                </div>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Precautions<i class="material-icons right">close</i></span>
+                <p class="wheather-precaution"></p>
+            </div>
+            
+        </div>
+    
+
+
+
+     <!--JavaScript at end of body for optimized loading-->
+     <script type="text/javascript" src="js/materialize.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--Para poder hacer jquery-->
+     <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
