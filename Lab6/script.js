@@ -16,14 +16,14 @@ const signInPasswordIngresado = document.getElementById('sign-in-password');
 const signUpPassword = document.getElementById('sign-up-password'); 
 const confirmPassword = document.getElementById('confirm-password');
 
-const password = signUpPassword.value;
-const confirmationPassword = confirmPassword.value;
+let password = signUpPassword.value;
+let confirmationPassword = confirmPassword.value;
 
 function signUp(){
-    if(confirmationPassword == password){
+    if(confirmPassword.value == signUpPassword.value){
         console.log("Sign Up Success!");
         container.classList.remove("right-panel-active");
-    } else{
+    } else if (confirmPassword.value != signUpPassword.value){
         console.error("Not the same password!");
         const differentPassword = document.getElementById('different-password');
         differentPassword.innerHTML = ("Password is different from the one previously typed!");
