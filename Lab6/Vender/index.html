@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vender</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+   
+    <header class="header">
+        <div class="container">
+            <h2>Store</h2>
+            <a href="#" class="bag">
+                <img src="https://ps.w.org/added-to-cart-popup-woocommerce/assets/icon-256x256.png?rev=1588875" alt="cart de Compras" class="cart-image">
+            </a>    
+        </div>
+    </header>
+
+    <div class="cart">
+        <a href="#" class="closecart">Close</a>
+        <div id="minicart">
+            <table id="lista-carrito">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+            <div class="pesos-total">
+                <p>Total: $</p><p class="price" id="total">0</p>
+            </div>
+            <button id="go-checkout">Checkout</button>
+        </div>
+    </div>
+    <div class="cards container">
+        <h1>Our Collection</h1>
+        <div class="card">
+            <img src="/TC2005B/Lab6/Vender/shoe.png">
+            <p class="title" id="title1">Nike Air Max Plus</p>
+            <p class="description" id="description1">Men's Shoes</p>
+            <div class="pesos">
+                <p>$</p><p class="price" id="price1">2200</p>
+            </div>
+            <a href="#" class="button" id="1">
+                Add to Cart
+            </a>
+        </div>
+        <div class="card">
+            <img src="/TC2005B/Lab6/Vender/shoe.png">
+            <p class="title" id="title2">Nike Blazers Low</p>
+            <p class="description" id="description2">Men's Shoes</p>
+            <div class="pesos">
+                <p>$</p><p class="price" id="price2">1999</p>
+            </div>
+            <a href="#" class="button" id="2">
+                Add to Cart
+            </a>
+        </div>
+        <div class="card">
+            <img src="/TC2005B/Lab6/Vender/shoe.png">
+            <p class="title" id="title3">Nike Jordans High</p>
+            <p class="description" id="description3">Men's Shoes</p>
+            <div class="pesos">
+                <p>$</p><p class="price" id="price3">2149</p>
+            </div>
+            
+            <a href="#" class="button" id="3">
+                Add to Cart
+            </a>
+        </div>
+
+    </div>
+
+
+
+   <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

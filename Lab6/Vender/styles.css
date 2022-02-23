@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+
+	font-family: 'Montserrat', sans-serif;
+	
+}
+
+.container{
+    margin: auto;
+    padding: 0 20px;
+}
+
+.header{
+    border-bottom: 1px solid rgb(243, 243, 243);
+    
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bag{
+    position: relative;
+}
+
+.cart-image{
+    width: 45px;
+    height: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0 0 0;
+}
+
+.card {
+    width: 40%;
+    border: solid #ccc 1px;
+    border-radius: 20px;
+    overflow: hidden;
+    line-height: 1.5rem;
+    padding-bottom: 20px;
+    margin: 0 10px;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card .title{
+    font-weight: 900;
+    font-size: 25px;
+}
+
+/* .card .price{
+    font-size: 4rem;
+    font-weight: 100;
+    text-align: right;
+    line-height: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+} */
+
+.button{
+    border-radius: 50px;
+    display: block;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    height: 3rem;
+    width: 90%;
+    line-height: 3rem;
+    margin: auto;
+    transition: all .3s ease;
+}
+
+.button:hover{
+    background: #2c2c2c;
+}
+
+.cart{
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background: #fff;
+    box-shadow: 0px 0px 5px #d4d4d4;
+    font-size: 16px;
+    transition: all .5s ease;
+}
+
+.activo{
+    right: 0;
+}
+
+.cart #minicart{
+    padding: 1.3rem;
+}
+
+.cart #minicart .button {
+    margin-top: 2rem;
+}
+
+.cart .table{
+    border-collapse : collapse;
+}
+
+.cart th, .cart td {
+    padding: 10px;
+    text-align: left;
+}
+.closecart {
+    font-size: 2rem;
+    position: absolute;
+    right: 10px;
+}
+#go-checkout {
+    display: block;
+    background: slategrey;
+    color: #fff;
+    width: fit-content;
+    height: auto;
+    text-align: center;
+    border-radius: 20px;
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.pesos{
+    display: flex;
+    font-size: 4rem;
+    font-weight: 100;
+    text-align: right;
+    line-height: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.pesos-total{
+    display: flex;
+    font-size: 2rem;
+    font-weight: 100;
+    text-align: right;
+    line-height: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
