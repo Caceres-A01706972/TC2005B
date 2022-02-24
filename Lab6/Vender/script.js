@@ -15,7 +15,7 @@ const nameArticulo2 = document.getElementById('title2').innerHTML;
 const priceArticulo2 = parseInt(document.getElementById('price2').innerHTML);
 
 const nameArticulo3 = document.getElementById('title3').innerHTML;
-const priceArticulo3 = parseInt(document.getElementById('price3').innerHTML);
+var priceArticulo3 = parseInt(document.getElementById('price3').innerHTML);
 
 //Body
 const courseList = document.querySelector('.cards');
@@ -38,19 +38,35 @@ addToCartBtn2.addEventListener('click', agregaArticulo2);
 const addToCartBtn3 = document.getElementById('3');
 addToCartBtn3.addEventListener('click', agregaArticulo3);
 
+function updateQuantity1(){
+    var cantidad = document.getElementById('product-quantity1');
+    var valueCantidad = cantidad.options[cantidad.selectedIndex];
+    console.log(valueCantidad.value);
+    return valueCantidad.value;
+}
+
+function updateQuantity2(){
+    var cantidad = document.getElementById('product-quantity2');
+    var valueCantidad = cantidad.options[cantidad.selectedIndex];
+    console.log(valueCantidad.value);
+
+    return valueCantidad.value;
+}
+
+function updateQuantity3(){
+    var cantidad = document.getElementById('product-quantity3');
+    var valueCantidad = cantidad.options[cantidad.selectedIndex];
+    console.log(valueCantidad.value);
+
+    return valueCantidad.value;
+}
 
 function agregaArticulo1(){
     articulosCarrito.push(nameArticulo1);
     console.log("Articulo Agregado");
     console.log(articulosCarrito);
-    total += priceArticulo1;
-    console.log(total);
 
-    // var newRowContent = "<tr> </tr>";
-    // const table = document.getElementById('table-body');
-    // var tableRow = document.createElement("tr");
-    // var newRow = table.appendChild(tableRow);
-    // var newRowColumn = newRow.appendChild("td");
+    var cantidad = updateQuantity1();
 
     var table = document.getElementById('table-body');
     var row = table.insertRow(0);
@@ -65,7 +81,11 @@ function agregaArticulo1(){
     cell3.innerHTML = priceArticulo1;
 
     var cell4 = row.insertCell(3);
-    cell4.innerHTML = "Quantity";
+    cell4.innerHTML = cantidad;
+
+    var precio = priceArticulo1 * cantidad;
+    total += precio;
+    console.log("total: " + total);
 
     cartTotal.innerHTML = total;
 }
@@ -74,11 +94,11 @@ function agregaArticulo2(){
     articulosCarrito.push(nameArticulo2);
     console.log("Articulo Agregado");
     console.log(articulosCarrito);
-    total += priceArticulo2;
-    console.log(total);
+
+    var cantidad = updateQuantity2();
 
     var table = document.getElementById('table-body');
-    var row = table.insertRow(1);
+    var row = table.insertRow(0);
 
     var cell1 = row.insertCell(0);
     cell1.innerHTML = "Picture";
@@ -90,7 +110,11 @@ function agregaArticulo2(){
     cell3.innerHTML = priceArticulo2;
 
     var cell4 = row.insertCell(3);
-    cell4.innerHTML = "Quantity";
+    cell4.innerHTML = cantidad;
+
+    var precio = priceArticulo2 * cantidad;
+    total += precio;
+    console.log("total: " + total);
 
     cartTotal.innerHTML = total;
 }
@@ -99,11 +123,11 @@ function agregaArticulo3(){
     articulosCarrito.push(nameArticulo3);
     console.log("Articulo Agregado");
     console.log(articulosCarrito);
-    total += priceArticulo3;
-    console.log(total);
+
+    var cantidad= updateQuantity3();
 
     var table = document.getElementById('table-body');
-    var row = table.insertRow(2);
+    var row = table.insertRow(0);
 
     var cell1 = row.insertCell(0);
     cell1.innerHTML = "Picture";
@@ -115,7 +139,11 @@ function agregaArticulo3(){
     cell3.innerHTML = priceArticulo3;
 
     var cell4 = row.insertCell(3);
-    cell4.innerHTML = "Quantity";
+    cell4.innerHTML = cantidad;
+
+    var precio = priceArticulo3 * cantidad;
+    total += precio;
+    console.log("total: " + total);
 
     cartTotal.innerHTML = total;
 }
