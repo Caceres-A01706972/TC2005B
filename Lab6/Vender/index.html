@@ -21,7 +21,7 @@
     </header>
 
     <div class="cart">
-        <a href="#" class="closecart">Close</a>
+        <a href="#" class="closecart"><i class="fa-solid fa-xmark"></i></a>
         <div id="minicart">
             <table id="lista-carrito">
                 <thead>
@@ -36,7 +36,18 @@
                 <tbody id="table-body"></tbody>
             </table>
             <div class="pesos-total">
-                <p>Total: $</p><p class="price" id="total">0</p>
+                <p>Subtotal: $</p><p class="price" id="total">0</p>
+            </div>
+            <div class="iva">
+                <p>IVA: $</p><p id="total-iva"></p>
+                <p id="ivaInfo"></p>
+                <i class="fa-solid fa-circle-question" id="questionIcon"></i>
+            </div>
+            <div class="ivaPopUp" id="ivaPopUp">
+                <p id="popUpInfo">Impuesto indirecto sobre el consumo e del 16%.</p>
+            </div>
+            <div class="cart-total">
+                <p>Total: $</p><p class="price" id="cart-total">0</p>
             </div>
             <button id="go-checkout">Checkout</button>
         </div>
@@ -126,5 +137,6 @@
 
     
    <script type="text/javascript" src="script.js"></script>
+   <script src="https://kit.fontawesome.com/7cb84113fc.js" crossorigin="anonymous"></script>
 </body>
 </html>

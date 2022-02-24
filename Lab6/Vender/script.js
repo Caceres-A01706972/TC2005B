@@ -17,6 +17,9 @@ const priceArticulo2 = parseInt(document.getElementById('price2').innerHTML);
 const nameArticulo3 = document.getElementById('title3').innerHTML;
 var priceArticulo3 = parseInt(document.getElementById('price3').innerHTML);
 
+var iva = document.getElementById('total-iva');
+var totalCarrito = document.getElementById('cart-total');
+
 //Body
 const courseList = document.querySelector('.cards');
 let articulosCarrito = [];
@@ -42,6 +45,7 @@ function updateQuantity1(){
     var cantidad = document.getElementById('product-quantity1');
     var valueCantidad = cantidad.options[cantidad.selectedIndex];
     console.log(valueCantidad.value);
+
     return valueCantidad.value;
 }
 
@@ -88,6 +92,12 @@ function agregaArticulo1(){
     console.log("total: " + total);
 
     cartTotal.innerHTML = total;
+
+    let ivaCompra = total * 0.16;
+
+    iva.innerHTML = ivaCompra;
+
+    totalCarrito.innerHTML = total + ivaCompra;
 }
 
 function agregaArticulo2(){
@@ -117,6 +127,12 @@ function agregaArticulo2(){
     console.log("total: " + total);
 
     cartTotal.innerHTML = total;
+
+    let ivaCompra = total * 0.16;
+
+    iva.innerHTML = ivaCompra;
+
+    totalCarrito.innerHTML = total + ivaCompra;
 }
 
 function agregaArticulo3(){
@@ -146,6 +162,12 @@ function agregaArticulo3(){
     console.log("total: " + total);
 
     cartTotal.innerHTML = total;
+
+    let ivaCompra = total * 0.16;
+
+    iva.innerHTML = ivaCompra;
+
+    totalCarrito.innerHTML = total + ivaCompra;
 }
 
 
@@ -159,3 +181,13 @@ function closecart() {
     cart.classList.remove('activo')
 }
 
+
+
+var info = document.getElementById('questionIcon');
+var appearInfo = document.getElementById('ivaPopUp');
+info.addEventListener("mouseover", () => {
+    appearInfo.classList.add("popUpInfo-active");
+});
+info.addEventListener("mouseout", () => {
+    appearInfo.classList.remove("popUpInfo-active");
+});

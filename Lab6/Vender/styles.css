@@ -158,6 +158,46 @@ a{
     text-align: right;
     line-height: 2rem;
     margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.iva{
+    display: flex;
+    font-size: 1rem;
+    font-weight: lighter;
+    text-align: right;
+    line-height: 1rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+#ivaInfo{
+    margin-left: 2rem;
+}
+
+.cart-total{
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-align: right;
+    line-height: 2rem;
+    margin-top: 10px;
     margin-bottom: 2rem;
 }
 
+.ivaPopUp{
+    border: 1px solid red;
+    width: auto;
+    color: #000;
+    background-color: blanchedalmond;
+    padding-top: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    opacity: 0;
+    font-size: smaller;
+}
+
+.popUpInfo-active{
+    opacity: 1;
+}
