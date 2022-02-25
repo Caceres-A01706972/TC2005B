@@ -14,6 +14,7 @@
     <header class="header">
         <div class="container">
             <h2>Store</h2>
+            <a href="#questions-section">Lab Questions</a>
             <a href="#" class="bag">
                 <img src="https://ps.w.org/added-to-cart-popup-woocommerce/assets/icon-256x256.png?rev=1588875" alt="cart de Compras" class="cart-image">
             </a>    
@@ -49,9 +50,10 @@
             <div class="cart-total">
                 <p>Total: $</p><p class="price" id="cart-total">0</p>
             </div>
-            <button id="go-checkout">Checkout</button>
+            <button id="go-checkout"><a id="checkout" onclick="checkoutProcess()">Checkout</a></button>
         </div>
     </div>
+    
     <div class="cards container">
         <h1>Our Collection</h1>
         <div class="card">
@@ -134,6 +136,29 @@
 
     </div>
 
+    <section class="questions-section" id="questions-section">
+        <div class="question">
+            <h3>¿Por qué es una buena práctica usar JavaScript para checar que <br> sean válidos los 
+                inputs de las formas antes de enviar los datos al servidor?
+            </h3>
+            <p>Porque en JavaScript al validar los datos de los inputs hechos por los usuarios, 
+                podemos notificar de manera instantanea al usuario si ha cometido algun error.
+            </p>
+        </div>
+        <div class="question">
+            <h3>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</h3>
+            <p>Facilmente se puede saltar la validacion hecha con JavaScript utilizando algunas palabras reservadas. 
+                Es decir obteniendo los valores de las variables enviadas a traves de metodos como Post y con ayuda del operador $.</p>
+        </div>
+        <div class="question">
+            <h3> Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces <br>
+                ¿por qué la primera pregunta dice que es una buena práctica?
+            </h3>
+            <p>Es buena practica para notificarle al usuario si se ha equivocado en algun campo. Pero no es buena practica usar la validacion asi nomas.
+                Se deben usar algoritmos de encriptacion para poder asegurar de que no cualquiera pueda tener acceso a la informacion plana de las variables.
+            </p>
+        </div>
+    </section>
 
     
    <script type="text/javascript" src="script.js"></script>

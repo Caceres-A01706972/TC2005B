@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -46,7 +50,7 @@ a{
 }
 
 .card {
-    width: 40%;
+    width: 30%;
     border: solid #ccc 1px;
     border-radius: 20px;
     overflow: hidden;
@@ -200,4 +204,26 @@ a{
 
 .popUpInfo-active{
     opacity: 1;
+    
 }
+
+.total-iva-active{
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    background-color: #555;
+    color: #bbb;
+    line-height: 1.5;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .questions-section{
+      
+      margin-top: 5rem;
+  }

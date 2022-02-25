@@ -7,6 +7,7 @@ var cartTotal = document.getElementById('total');
 const contenedorCarrito =  document.querySelector('#lista-carrito tbody');
 const carrito = document.querySelector('#minicart');
 const goCheckoutBtn =  document.querySelector('#go-checkout');
+const checkoutconfirm = document.getElementById('checkout');
 
 const nameArticulo1 = document.getElementById('title1').innerHTML;
 const priceArticulo1 = parseInt(document.getElementById('price1').innerHTML);
@@ -40,6 +41,8 @@ addToCartBtn2.addEventListener('click', agregaArticulo2);
 //Boton Add To Cart de Articulo 3
 const addToCartBtn3 = document.getElementById('3');
 addToCartBtn3.addEventListener('click', agregaArticulo3);
+
+
 
 function updateQuantity1(){
     var cantidad = document.getElementById('product-quantity1');
@@ -185,9 +188,19 @@ function closecart() {
 
 var info = document.getElementById('questionIcon');
 var appearInfo = document.getElementById('ivaPopUp');
+
 info.addEventListener("mouseover", () => {
     appearInfo.classList.add("popUpInfo-active");
+    iva.classList.add("total-iva-active");
 });
 info.addEventListener("mouseout", () => {
     appearInfo.classList.remove("popUpInfo-active");
+    iva.classList.remove("total-iva-active")
 });
+
+function checkoutProcess(){
+    console.log("Checkout Successs!");
+    var element = document.createElement('div');
+    element.innerHTML = "Checkout Success!";
+    carrito.appendChild(element);
+}
