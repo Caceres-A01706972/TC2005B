@@ -5,6 +5,8 @@ const filesystem = require('fs'); //fs es el modulo
 const http = require('http');
 const peliculas = ["Back to The Future", "Karate Kid", "Scarface"];
 const canciones = ["Hotel California by The Eagles", "Lucid Dreams by Juice Wrld", "Flashing Lights by Kanye West"];
+filesystem.writeFileSync('Songs.txt', canciones.toString());
+filesystem.writeFileSync('Movies.txt', peliculas.toString());
 
 const server = http.createServer( (request, response) => {
     console.log(request);
@@ -59,6 +61,7 @@ const server = http.createServer( (request, response) => {
             const nuevoDato = datosCompletos.split('=')[1];
             console.log(nuevoDato);
             peliculas.push(nuevoDato);
+            filesystem.writeFileSync('Movies.txt', peliculas.toString());
             console.log(peliculas);
             response.setHeader('Content-Type', 'text/html');
             response.write('<!DOCTYPE html><html lang="es-mx"><head><title>Peliculas Favoritas</title><meta charset="utf-8"></meta></head>');
@@ -131,6 +134,7 @@ const server = http.createServer( (request, response) => {
             const nuevoDato = datosCompletos.split('=')[1];
             console.log(nuevoDato);
             canciones.push(nuevoDato);
+            filesystem.writeFileSync('Songs.txt', canciones.toString());
             console.log(canciones);
             response.setHeader('Content-Type', 'text/html');
             response.write('<!DOCTYPE html><html lang="es-mx"><head><title>Canciones Favoritas</title><meta charset="utf-8"></meta></head>');
