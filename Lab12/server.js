@@ -8,9 +8,12 @@ const path = require('path');
 
 app.use(express.static('public'));
 
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+
 app.get('/', (request, response) => {
     console.log("Someone has entered Home");
-    response.sendFile(path.join(__dirname, 'views', 'home.html'));
+    response.render('home');
 });
 
 

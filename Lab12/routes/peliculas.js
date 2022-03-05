@@ -14,13 +14,13 @@ router.get('/una-ruta', (request, response, next) => {
 
 router.get("/", (request, response) => {
     console.log("Someone entered Peliculas ")
-    response.sendFile(path.join(__dirname, '..', 'views', 'peliculas.html'));
+    response.render('peliculas');
 });
 
 
 router.get("/new", (request, response) => {
     console.log("Someone has entered Peliculas New");
-    response.sendFile(path.join(__dirname, '..', 'views', 'peliculasNew.html'));
+    response.render('peliculasNew');
 });
 
 

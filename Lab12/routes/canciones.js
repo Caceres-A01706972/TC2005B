@@ -10,12 +10,12 @@ const canciones = ["Hotel California by The Eagles", "Lucid Dreams by Juice Wrld
 
 router.get("/", (request, response) => {
     console.log("Someone has entered Canciones")
-    response.sendFile(path.join(__dirname, '..', 'views', 'canciones.html'));
+    response.render('canciones');
 });
 
 router.get("/new", (request, response) => {
     console.log("Someone has entered Canciones New");
-    response.sendFile(path.join(__dirname, '..', 'views', 'cancionesNew.html'));
+    response.render('cancionesNew');
 });
 
 router.post("/new", (request, response) => {
