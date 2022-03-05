@@ -1,0 +1,21 @@
+.title{
+    text-align: center;
+}
+
+.indications{
+    font-size: large;
+    text-decoration: underline;
+}
+
+.input{
+    border-style: groove;
+    border-radius: 5px;
+}
+
+.btn{
+    color: white;
+    background-color: rgb(22, 22, 22);
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px;
+}
