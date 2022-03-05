@@ -12,9 +12,9 @@
     <h1 class="favorites-title">Favorite Movies!</h1>
     <p class="indications">Estas son las peliculas favoritas de Ricardo:</p>
     <ol>
-    <!-- for (let movie in peliculas){
-        <li>' +peliculas[movie] + '</li>
-    } --> <li>Movie</li>
+    <% for (let movie in peliculas){ %>
+        <li><%= peliculas[movie] %></li>
+    <%} %>
     </ol>
     <div class="links">
         <a href="/peliculas/new">

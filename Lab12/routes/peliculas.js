@@ -14,7 +14,7 @@ router.get('/una-ruta', (request, response, next) => {
 
 router.get("/", (request, response) => {
     console.log("Someone entered Peliculas ")
-    response.render('peliculas');
+    response.render('peliculas', {peliculas: peliculas});
 });
 
 

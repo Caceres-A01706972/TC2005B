@@ -12,9 +12,9 @@
     <h1 class="favorites-title">Favorite Songs!</h1>
     <p class="indications">Estas son las canciones favoritas de Ricardo:</p>
     <ol>
-    <!-- for (let song in canciones){
-        <li>' + canciones[song] + '</li>
-    } --> <li>Canciones</li>
+    <%for (let song in canciones){ %>
+        <li><%= canciones[song] %></li>
+    <% } %>
     </ol>
     <div class="links">
         <a href="/canciones/new">
