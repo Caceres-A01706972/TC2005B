@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 const peliculas = ["Back to The Future", "Karate Kid", "Scarface"];
 
 app.get('/', (request, response) => {
-    console.log("Main Page");
+    console.log("Someone has entered Main Page");
     response.write('<!DOCTYPE html><html lang="es-mx"><head><title>Ricardos Favorites</title><meta charset="utf-8"></meta></head>');
     response.write('<body>');
     response.write('<main>');
@@ -17,6 +17,12 @@ app.get('/', (request, response) => {
     response.write('</body>');
     response.end();
 });
+
+app.get('/pending', (request, response) => {
+    response.status(404);
+    response.write("Ups Error 404, Not Found");
+    response.end();
+})
 
 
 const peliculasRouter = require('./routes/peliculas');
