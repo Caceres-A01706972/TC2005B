@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router()
 
+const filesystem = require('fs');
+
 const canciones = ["Hotel California by The Eagles", "Lucid Dreams by Juice Wrld", "Flashing Lights by Kanye West"];
 
 
@@ -50,6 +52,7 @@ router.post("/new", (request, response) => {
     console.log("Posted");
     console.log(request.body);
     canciones.push(request.body.nombre);
+    filesystem.writeFileSync('canciones.txt', canciones.toString());
     response.redirect('/canciones/');
     response.end();
 });

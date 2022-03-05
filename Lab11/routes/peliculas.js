@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router()
 
+const filesystem = require('fs');
 
 const peliculas = ["Back to The Future", "Karate Kid", "Scarface"];
+
 
 router.get("/", (request, response) => {
     console.log("Someone entered Peliculas ")
@@ -54,6 +56,7 @@ router.post("/new", (request, response) => {
     console.log("Posted");
     console.log(request.body);
     peliculas.push(request.body.nombre);
+    filesystem.writeFileSync('peliculas.txt', peliculas.toString());
     response.redirect('/peliculas/');
     response.end();
 });
