@@ -15,7 +15,21 @@
 }
 
 h2{
-    color: red;
-    text-decoration: line-through;
+    text-decoration: underline;
+    text-align: left;
+    color: black;
+}
+
+.header-content{
+    border-bottom: 10px;
+}
+
+.footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
     text-align: center;
 }
