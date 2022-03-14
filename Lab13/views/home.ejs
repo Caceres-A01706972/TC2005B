@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo's Favorites</title>
+    <link rel="stylesheet"  href="../css/stylesHome.css"/>
+
+</head>
+<body>
+    <%- include('includes/header.ejs') %>
+    <h1 class="favorites-title">Ricardo's Favorites!</h1>
+    <div class="favorites-button">
+        <a href="/peliculas">
+            <button class="btn"> Peliculas </button>
+        </a> 
+        <a href="canciones">
+            <button class="btn"> Canciones </button>
+        </a>
+    </div>
+    <%- include('includes/footer.ejs') %>
+</body>
+</html>

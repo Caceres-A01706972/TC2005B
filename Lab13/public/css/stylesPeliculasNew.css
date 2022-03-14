@@ -1,0 +1,31 @@
+.title{
+    text-align: center;
+}
+
+.indications{
+    font-size: large;
+    text-decoration: underline;
+}
+
+.input{
+    border-style: groove;
+    border-radius: 5px;
+}
+
+.btn{
+    color: white;
+    background-color: rgb(22, 22, 22);
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px;
+}
+
+.footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}
