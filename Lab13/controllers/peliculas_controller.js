@@ -1,5 +1,4 @@
-const peliculas = ["Back to The Future", "Karate Kid", "Scarface"];
-
+const Pelicula = require('../models/pelicula');
 
 exports.getNuevaPelicula = (request, response) => {
     console.log("Someone has entered Peliculas New");
@@ -9,8 +8,8 @@ exports.getNuevaPelicula = (request, response) => {
 exports.postNuevaPelicula = (request, response) => {
     console.log("Posted");
     console.log(request.body);
-    peliculas.push(request.body.nombre);
-    console.log(peliculas);
+    const nueva_pelicula = new Pelicula(request.body.nombre);
+    nueva_pelicula.save();
     //filesystem.writeFileSync('peliculas.txt', peliculas.toString());
     response.redirect('/peliculas/');
     response.end();
@@ -19,7 +18,7 @@ exports.postNuevaPelicula = (request, response) => {
 exports.get = (request, response) => {
     console.log("Someone entered Peliculas ")
     response.render('peliculas', {
-        peliculas: peliculas
+        peliculas: Pelicula.fetchAll()
     });
 };
 

@@ -1,4 +1,5 @@
-const canciones = ["Hotel California by The Eagles", "Lucid Dreams by Juice Wrld", "Flashing Lights by Kanye West"];
+const Cancion = require('../models/cancion');
+
 
 exports.getNuevaCancion = (request, response) => {
     console.log("Someone has entered Canciones New");
@@ -8,8 +9,8 @@ exports.getNuevaCancion = (request, response) => {
 exports.postNuevaCancion = (request, response) => {
     console.log("Posted");
     console.log(request.body);
-    canciones.push(request.body.nombre);
-    console.log(canciones);
+    const nueva_cancion = new Cancion(request.body.nombre);
+    nueva_cancion.save();
     //filesystem.writeFileSync('canciones.txt', canciones.toString());
     response.redirect('/canciones/');
     response.end();
@@ -18,6 +19,6 @@ exports.postNuevaCancion = (request, response) => {
 exports.get = (request, response) => {
     console.log("Someone has entered Canciones")
     response.render('canciones', {
-        canciones: canciones
+        canciones: Cancion.fetchAll()
     });
 };
