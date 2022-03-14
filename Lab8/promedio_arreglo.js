@@ -14,5 +14,4 @@ let promedio = suma / n;
 console.log("El promedio es: ");
 console.log(promedio);
 
-return;
 
