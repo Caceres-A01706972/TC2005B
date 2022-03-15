@@ -24,7 +24,9 @@ app.set('views', 'views');
 
 app.get('/', (request, response) => {
     console.log("Someone has entered Home");
-    response.render('home');
+    response.render('home', {
+        isLoggedIn: request.session.isLoggedIn
+    });
 });
 
 

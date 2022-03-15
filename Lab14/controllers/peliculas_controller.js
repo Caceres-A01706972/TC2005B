@@ -2,7 +2,9 @@ const Pelicula = require('../models/pelicula');
 
 exports.getNuevaPelicula = (request, response) => {
     console.log("Someone has entered Peliculas New");
-    response.render('peliculasNew');
+    response.render('peliculasNew', {
+        isLoggedIn: request.session.isLoggedIn
+    });
 };
 
 exports.postNuevaPelicula = (request, response) => {
@@ -25,7 +27,8 @@ exports.get = (request, response) => {
     console.log(request.cookies.ultima_pelicula)
 
     response.render('peliculas', {
-        peliculas: Pelicula.fetchAll()
+        peliculas: Pelicula.fetchAll(),
+        isLoggedIn: request.session.isLoggedIn === true ? ture : false
     });
 };
 

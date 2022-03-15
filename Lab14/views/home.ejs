@@ -10,7 +10,13 @@
 </head>
 <body>
     <%- include('includes/header.ejs') %>
-    <h1 class="favorites-title">Ricardo's Favorites!</h1>
+    <% if (isLoggedIn) { %>
+        <!-- Solo si esta logged in se muestran las preguntas--><button><a href="/users/logout">Logout</a></button>
+    <% } %>
+    <button><a href="/users/login">Log In to see questions</a></button>
+    <h1 class="favorites-title">
+        Ricardo's Favorites!
+    </h1>
     <div class="favorites-button">
         <a href="/peliculas">
             <button class="btn"> Peliculas </button>
@@ -19,7 +25,9 @@
             <button class="btn"> Canciones </button>
         </a>
     </div>
-    <%- include('includes/questions.ejs') %>
+    <% if (isLoggedIn) { %>
+        <!-- Solo si esta logged in se muestran las preguntas--><%- include('includes/questions.ejs') %>
+    <% } %>
     <%- include('includes/footer.ejs') %>
 </body>
 </html>

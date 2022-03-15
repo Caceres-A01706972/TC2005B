@@ -3,7 +3,9 @@ const Cancion = require('../models/cancion');
 
 exports.getNuevaCancion = (request, response) => {
     console.log("Someone has entered Canciones New");
-    response.render('cancionesNew');
+    response.render('cancionesNew', {
+        isLoggedIn: request.session.isLoggedIn
+    });
 };
 
 exports.postNuevaCancion = (request, response) => {
@@ -26,6 +28,7 @@ exports.get = (request, response) => {
     console.log(request.cookies.ultima_cancion)
 
     response.render('canciones', {
-        canciones: Cancion.fetchAll()
+        canciones: Cancion.fetchAll(),
+        isLoggedIn: request.session.isLoggedIn === true ? ture : false
     });
 };
