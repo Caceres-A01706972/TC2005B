@@ -10,13 +10,15 @@ exports.postNuevaPelicula = (request, response) => {
     console.log(request.body);
     const nueva_pelicula = new Pelicula(request.body.nombre);
     nueva_pelicula.save();
-    //filesystem.writeFileSync('peliculas.txt', peliculas.toString());
+    response.setHeader('Set-Cookie', ['ultima_pelicula='+nueva_pelicula.nombre]);
     response.redirect('/peliculas/');
     response.end();
 };
 
 exports.get = (request, response) => {
     console.log("Someone entered Peliculas ")
+    console.log('Cookie: ' + request.get('Cookie'));
+    console.log(request.get('Cookie').split(';')[1].trim().split('=')[1]);
     response.render('peliculas', {
         peliculas: Pelicula.fetchAll()
     });
