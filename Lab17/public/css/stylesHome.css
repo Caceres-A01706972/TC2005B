@@ -1,0 +1,35 @@
+.favorites-title{
+    text-align: center;
+}
+
+.favorites-button{
+    display: flex;
+}
+
+.btn{
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+h2{
+    text-decoration: underline;
+    text-align: left;
+    color: black;
+}
+
+.header-content{
+    border-bottom: 10px;
+}
+
+.footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}
