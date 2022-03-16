@@ -12,13 +12,20 @@ module.exports = class Pelicula {
 
     //Este método servirá para guardar de manera persistente el nuevo objeto. 
     save() {
-        // peliculas.push(this.nombre);
+        return db.execute('INSERT INTO peliculas (nombre) VALUES (?)',
+        [this.nombre]
+    );
     }
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.
     static fetchAll() {
         return db.execute('SELECT * FROM peliculas');
             
+    }
+
+    static fetchOne(id){
+        return db.execute('SELECT * FROM peliculas WHERE id=?', [id]);
+
     }
 
 }
