@@ -1,4 +1,6 @@
-const peliculas = ["Back to The Future", "Karate Kid", "Scarface"];
+
+
+const db = require('../util/database');
 
 
 module.exports = class Pelicula {
@@ -10,12 +12,13 @@ module.exports = class Pelicula {
 
     //Este método servirá para guardar de manera persistente el nuevo objeto. 
     save() {
-        peliculas.push(this.nombre);
+        // peliculas.push(this.nombre);
     }
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.
     static fetchAll() {
-        return peliculas;
+        return db.execute('SELECT * FROM peliculas');
+            
     }
 
 }
