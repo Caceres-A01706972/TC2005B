@@ -7,10 +7,13 @@ const canciones = ["Hotel California by The Eagles", "Lucid Dreams by Juice Wrld
 
 const cancionesController = require('../controllers/canciones_controller');
 
-router.get("/", cancionesController.get);
 
 router.get("/new", cancionesController.getNuevaCancion);
 
 router.post("/new", cancionesController.postNuevaCancion);
+
+router.get("/:cancion_id", cancionesController.getCancion);
+
+router.get("/", cancionesController.get);
 
 module.exports = router;

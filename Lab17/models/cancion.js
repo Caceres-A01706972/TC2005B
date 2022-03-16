@@ -1,5 +1,5 @@
-const canciones = ["Hotel California by The Eagles", "Lucid Dreams by Juice Wrld", "Flashing Lights by Kanye West"];
 
+const db = require('../util/database');
 
 module.exports = class Cancion {
 
@@ -10,12 +10,19 @@ module.exports = class Cancion {
 
     //Este método servirá para guardar de manera persistente el nuevo objeto. 
     save() {
-        canciones.push(this.nombre);
+        return db.execute('INSERT INTO canciones (nombre) VALUES (?)',
+        [this.nombre]
+        );
     }
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.
     static fetchAll() {
-        return canciones;
+        return db.execute('SELECT * FROM canciones');
+    }
+
+    static fetchOne(id){
+        return db.execute('SELECT * FROM canciones WHERE id=?', [id]);
+
     }
 
 }
