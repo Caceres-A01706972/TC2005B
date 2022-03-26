@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Canciones</title>
+    <link rel="stylesheet" href="../css/stylesCancionesNew.css"/>
+
+</head>
+<body>
+    <h1 class="title">Favorite Songs!</h1>
+    <h2 class="title">Aqui Ingresaras Canciones a la Lista!</h2>
+    <p class="indications">Ingresa el nombre de la cancion:</p>
+    <form action="/canciones/new" method="POST">
+        <label for="nombre">Nombre de la cancion: </label>
+        <input class="input" type="text" name="nombre" required>
+        <input class="btn" type="submit" value="Enviar">
+    </form>
+    <br><br>
+    <a href="/canciones">
+        <button class="btn">Regresar a la lista de canciones</button>
+    </a>
+    </br>
+    <%- include('includes/footer.ejs') %>
+</body>
+</html>
