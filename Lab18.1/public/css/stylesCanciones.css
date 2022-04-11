@@ -1,0 +1,29 @@
+.favorites-title{
+    text-align: center;
+}
+
+.indications{
+    font-size: large;
+}
+
+.links{
+    display: flex;
+}
+
+.btn{
+    margin-right: 20px;
+    padding: 20px;
+    background-color: rgb(27, 27, 27);
+    border-radius: 20px;
+    color: white;
+}
+
+.footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}

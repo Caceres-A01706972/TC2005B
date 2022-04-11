@@ -22,6 +22,7 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
+
 app.get('/', (request, response) => {
     console.log("Someone has entered Home");
     response.render('home', {
@@ -36,6 +37,8 @@ app.get('/pending', (request, response) => {
     response.end();
 })
 
+const rutas_usuarios = require('./routes/users');
+app.use('/users', rutas_usuarios);
 
 const peliculasRouter = require('./routes/peliculas');
 app.use('/peliculas', peliculasRouter); //Anything that starts with /peliculas works with userRoutes
@@ -43,7 +46,5 @@ app.use('/peliculas', peliculasRouter); //Anything that starts with /peliculas w
 const cancionesRouter = require('./routes/canciones');
 app.use('/canciones', cancionesRouter); //Anything that starts with /peliculas works with userRoutes
 
-const userRoutes = require('./routes/users');
-app.use('/users/', userRoutes);
 
 app.listen(3000);
