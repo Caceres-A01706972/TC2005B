@@ -1,0 +1,162 @@
+body{
+    background-color: whitesmoke;
+   
+}
+
+.main{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}
+
+.weather-container{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#query{
+    border-radius: 5px;
+    border-width: thin;
+    background-color: rgb(235, 235, 235);
+    border-color: whitesmoke;
+}
+
+.search-icon{
+    width: 15px;
+    height: 15px;
+}
+.button{
+    border-color: transparent;
+    border-radius: 30px;
+}
+
+.button:hover,
+.button:focus {
+ box-shadow: 0 0.5em 0.5em -0.4em grey;
+  transform: translateY(-0.25em);
+}
+
+.icon{
+   width: 150px;
+   height: 150px;
+}
+
+.line{
+    background-color: rgba(199, 196, 196, 0.664);
+}
+
+.description{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}
+.description .icon{
+    margin: 20px;
+    margin-top: 5px;
+    position: center;
+    width: 50px;
+    height: 50px;
+}
+
+.description .weather-description{
+    margin-left: 0px;
+    margin-right: 20px;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.temperature-description{
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.highlights{
+    
+    margin-left: 60px;
+    text-decoration: underline;
+}
+
+.cards{
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 5rem;
+
+}
+
+
+.subtitle{
+ text-align: left;
+ margin-left: 20px;
+ color: gray;
+ font-weight: lighter;
+ 
+}
+
+.wind-status{
+    text-align: center;
+    width: 200px;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 25px;
+    height: inherit;
+}
+
+.wind-speed{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.wind-deg{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}
+
+.wind-deg-icon{
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+}
+.info-container{
+
+    background-color: rgb(236, 236, 236);
+    
+}
+
+.sunrise-sunset{
+    
+    width: 200px;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 25px;
+}
+
+.sunrise{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    margin-left: 20px;
+}
+
+.sunrise-icon{ 
+    width: 55px;
+    height: 55px;
+}
+
+.sunrise-hour{
+    margin-left: 10px;
+}
+
+.sunset{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    margin-left: 20px;
+}
+
+.sunset-icon{ 
+    width: 55px;
+    height: 55px;
+}
+
+.sunset-hour{
+    margin-left: 10px;
+}

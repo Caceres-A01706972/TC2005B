@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+        crossorigin="anonymous"></script>!-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--Para poder hacer jquery-->
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+
+            <div class="weather-container">
+                    
+                        <input type="search" id="query" name="q" placeholder="Search for places..."> <button onclick="location.reload()">clear</button>
+                        <button onclick="fn1()" id='btn' class="button"><img src="Images/search.png" class="search-icon"></button>
+                    
+                <h2 class="city"></h2>
+                <img class="icon">
+                <p class="temp"></p>
+                <p class="temperature-description"></p>
+                <hr class="line">
+                <div class="description">
+                    <img class="icon">
+                    <p class="weather-description"></p>
+                </div>
+            </div>
+            <div class="info-container">
+                <h4 class="highlights">Today's Highlights</h4>
+                <div class="cards">
+                    <div class="wind-status">
+                        <h5 class="subtitle">Wind Status</h5>
+                        <p class="wind-speed"></p>
+                        <div class="wind-deg">
+                            <img src="Images/wind-deg.png" class="wind-deg-icon">
+                            <p class="wind-degree"></p>
+                        </div>
+                        
+                    </div>
+                    <div class="sunrise-sunset">
+                        <h5 class="subtitle">Sunrise & Sunset</h5>
+                        <div class="sunrise">
+                            <img src="Images/sunrise.png" class="sunrise-icon">
+                            <p class="sunrise-hour"></p>
+                        </div>
+                        <div class="sunset">
+                            <img src="Images/sunset.png" class="sunset-icon">
+                            <p class="sunset-hour"></p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
